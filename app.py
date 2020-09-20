@@ -11,7 +11,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.write("""This is a simple image classification web app to predict three - Animals Elephant,Giraffe and Hippopotamus """)
 
-file = st.file_uploader("Please upload an image file", type=["jpg", "png"])
+file = st.file_uploader("Please upload an image file", type=["jpg", 'jpeg',"png"])
 
 
 if file is None:
