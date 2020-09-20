@@ -3,6 +3,8 @@ from keras.models import load_model
 import numpy as np
 from keras.preprocessing import image
 from PIL import Image
+import keras
+import tensorflow
 
 st.write("# Animal Classifier")
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -19,9 +21,7 @@ else:
 	st.image(image4, use_column_width=True)
 	image2=image4.resize((64,64))
 	test_image = image.img_to_array(image2)
-	test_image = np.expand_dims(test_image, axis = 0)
-
-
+	test_image = np.expand_dims(test_image,axis=0)
 	classifier=load_model('animal_classifier.h5')
 	result = classifier.predict(test_image)
 	
